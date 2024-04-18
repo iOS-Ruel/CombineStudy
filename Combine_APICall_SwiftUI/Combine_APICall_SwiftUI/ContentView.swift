@@ -46,6 +46,15 @@ struct ContentView: View {
             .padding()
             .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
             
+            Button {
+                self.viewModel.fetchTodosAndThenPosts()
+            } label: {
+                Text("Todos 호출 후 응답으로 Posts 호출")
+                    .foregroundStyle(.white)
+            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
+            
         }
         
     }
