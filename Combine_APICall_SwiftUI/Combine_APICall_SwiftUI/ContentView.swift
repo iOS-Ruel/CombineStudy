@@ -7,15 +7,22 @@
 
 import SwiftUI
 
+//https://jsonplaceholder.typicode.com/ Dummy 사용
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                
+            } label: {
+                Text("Todos 호출")
+                    .foregroundStyle(.white)
+            }
+            .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
+            
+            
         }
-        .padding()
+        
     }
 }
 

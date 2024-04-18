@@ -11,6 +11,8 @@
 		415489152BD14B160062A6EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415489142BD14B160062A6EE /* ContentView.swift */; };
 		415489172BD14B170062A6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415489162BD14B170062A6EE /* Assets.xcassets */; };
 		4154891A2BD14B170062A6EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415489192BD14B170062A6EE /* Preview Assets.xcassets */; };
+		415489212BD14C100062A6EE /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415489202BD14C100062A6EE /* Todo.swift */; };
+		415489232BD14C3E0062A6EE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415489222BD14C3E0062A6EE /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		415489142BD14B160062A6EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		415489162BD14B170062A6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		415489192BD14B170062A6EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		415489202BD14C100062A6EE /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		415489222BD14C3E0062A6EE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				415489142BD14B160062A6EE /* ContentView.swift */,
 				415489162BD14B170062A6EE /* Assets.xcassets */,
 				415489182BD14B170062A6EE /* Preview Content */,
+				415489202BD14C100062A6EE /* Todo.swift */,
+				415489222BD14C3E0062A6EE /* Post.swift */,
 			);
 			path = Combine_APICall_SwiftUI;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				415489152BD14B160062A6EE /* ContentView.swift in Sources */,
+				415489212BD14C100062A6EE /* Todo.swift in Sources */,
 				415489132BD14B160062A6EE /* Combine_APICall_SwiftUIApp.swift in Sources */,
+				415489232BD14C3E0062A6EE /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
