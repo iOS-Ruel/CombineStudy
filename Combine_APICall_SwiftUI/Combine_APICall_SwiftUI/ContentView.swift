@@ -56,9 +56,9 @@ struct ContentView: View {
             .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
             
             Button {
-                self.viewModel.fetchTodosAndPostsApiCallConditionally()
+                self.viewModel.fetchTodosAndApiCallConditionally()
             } label: {
-                Text("Todos 호출 후 응답결과에 따른 Posts 호출")
+                Text("Todos 호출 후 응답결과에 따라 호출 api 분기 처리")
                     .foregroundStyle(.white)
             }
             .padding()

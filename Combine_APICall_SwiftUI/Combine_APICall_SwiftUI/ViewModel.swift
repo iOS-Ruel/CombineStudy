@@ -96,9 +96,19 @@ class ViewModel: ObservableObject {
             .store(in: &subsciptions)
     }
     
-    //todos 호출후 응답에 따른 조건으로 Posts 호출
+    
+    //Todos 호출 후 응답에 따른 조건으로 다음 api 호출 결정
+    //Todos.count < 200 : 포스트 호출 ? 유저 호출
     func fetchTodosAndApiCallConditionally() {
-        ApiService.fetchTodosAndPostsApiCallConditionally()
+        let shouldFetchPosts : AnyPublisher<Bool, Error> = ApiService.fetchTodos()
+                                                                        .map{ $0.count < 200 }
+                                                                        .eraseToAnyPublisher()
+        print(shouldFetchPosts)
+        shouldFetchPosts
+            .filter { $0 == true }
+            .flatMap { _ in
+                return ApiService.fetchPosts()
+            }
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -111,7 +121,25 @@ class ViewModel: ObservableObject {
                 print("Post count : \(posts.count)")
             }
             .store(in: &subsciptions)
+        
+        shouldFetchPosts
+            .filter { $0 != true }
+            .flatMap { _ in
+                return ApiService.fetchUsers()
+            }
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally finished")
+                case .failure(let error):
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally: err: \(error)")
+                }
+            } receiveValue: {users in
+                
+                print("users count : \(users.count)")
+            }
+            .store(in: &subsciptions)
+        
     }
-    
     
 }

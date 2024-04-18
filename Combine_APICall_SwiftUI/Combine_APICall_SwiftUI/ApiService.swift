@@ -11,6 +11,7 @@ import Combine
 enum API {
     case fetchTodos
     case fetchPosts
+    case fetchUsers
     
     var url: URL {
         switch self {
@@ -18,12 +19,21 @@ enum API {
             return URL(string: "https://jsonplaceholder.typicode.com/todos")!
         case .fetchPosts:
             return URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        case .fetchUsers:
+            return URL(string: "https://jsonplaceholder.typicode.com/users")!
         }
     }
     
 }
 
 enum ApiService {
+    static func fetchUsers() -> AnyPublisher<[User], Error> {
+        print("APIService - fetchTodos ")
+        return URLSession.shared.dataTaskPublisher(for: API.fetchUsers.url)
+            .map { $0.data }
+            .decode(type: [User].self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
     
     static func fetchTodos() -> AnyPublisher<[Todo], Error> {
         print("APIService - fetchTodos ")
