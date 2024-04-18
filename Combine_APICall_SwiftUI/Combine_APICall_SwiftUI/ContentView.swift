@@ -37,6 +37,15 @@ struct ContentView: View {
             .padding()
             .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
             
+            Button {
+                self.viewModel.fetchTodosAndPostsAtTheSameTime()
+            } label: {
+                Text("Todos + Posts 동시 호출")
+                    .foregroundStyle(.white)
+            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(.gray))
+            
         }
         
     }

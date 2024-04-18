@@ -40,4 +40,16 @@ enum ApiService {
             .decode(type: [Post].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
+    
+    //post, todo 동시 호출
+    static func fetchTodosAndPostsAtTheSameTime() -> AnyPublisher<([Todo], [Post]), Error> {
+        
+        let fetchedTodos = fetchTodos()
+        let fetchedPosts = fetchPosts()
+        
+        return Publishers.CombineLatest(fetchedTodos, fetchedPosts)
+                .eraseToAnyPublisher()
+                
+        
+    }
 }
