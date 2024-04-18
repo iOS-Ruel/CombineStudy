@@ -68,9 +68,43 @@ class ViewModel: ObservableObject {
             .sink { completion in
                 switch completion {
                 case .finished:
-                    print("ViewModel - fetchTodosAndPostsAtTheSameTime finished")
+                    print("ViewModel - fetchTodosAndThenPosts finished")
                 case .failure(let error):
-                    print("ViewModel - fetchTodosAndPostsAtTheSameTime: err: \(error)")
+                    print("ViewModel - fetchTodosAndThenPosts: err: \(error)")
+                }
+            } receiveValue: {posts in
+                
+                print("Post count : \(posts.count)")
+            }
+            .store(in: &subsciptions)
+    }
+    
+    //todos 호출후 응답에 따른 조건으로 Posts 호출
+    func fetchTodosAndPostsApiCallConditionally() {
+        ApiService.fetchTodosAndPostsApiCallConditionally()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally finished")
+                case .failure(let error):
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally: err: \(error)")
+                }
+            } receiveValue: {posts in
+                
+                print("Post count : \(posts.count)")
+            }
+            .store(in: &subsciptions)
+    }
+    
+    //todos 호출후 응답에 따른 조건으로 Posts 호출
+    func fetchTodosAndApiCallConditionally() {
+        ApiService.fetchTodosAndPostsApiCallConditionally()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally finished")
+                case .failure(let error):
+                    print("ViewModel - fetchTodosAndPostsApiCallConditionally: err: \(error)")
                 }
             } receiveValue: {posts in
                 

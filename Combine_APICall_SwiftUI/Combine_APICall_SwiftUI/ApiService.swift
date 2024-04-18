@@ -21,13 +21,12 @@ enum API {
         }
     }
     
-    
-    
-    
 }
 
 enum ApiService {
+    
     static func fetchTodos() -> AnyPublisher<[Todo], Error> {
+        print("APIService - fetchTodos ")
         return URLSession.shared.dataTaskPublisher(for: API.fetchTodos.url)
             .map { $0.data }
             .decode(type: [Todo].self, decoder: JSONDecoder())
@@ -61,4 +60,18 @@ enum ApiService {
             }
             .eraseToAnyPublisher()
     }
+    
+    //Todos 호출뒤 결과로 특정 조건 성립되면 Posts 호출
+    static func fetchTodosAndPostsApiCallConditionally() -> AnyPublisher<[Post], Error> {
+        return fetchTodos()
+            .map { $0.count }
+            .filter{ $0 >= 200}
+            .flatMap { _ in
+                return fetchPosts()
+                    .eraseToAnyPublisher()
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    
 }
