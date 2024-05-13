@@ -214,34 +214,3 @@ class BookDetailViewController: UIViewController {
     }
     
 }
-
-
-
-
-
-
-/*
- 
- 개인적으로 ScrollView에 Data를 넣는것을 비추함
- (ex. ScrollView에 StackView를 넣던지 View들을 넣어 Label, ImageView등을 넣는데있어
- ScrollView의 height를 주어야함)
- 따라서, ScrollView가 아닌 TableView를 주로 사용하여 Cell들을 구분하여 각각의 리스트를 만들었음
- 여기서 Cell들의 UI가 각각 다름
- ex) indexPath.row == 1 -> ImageView를 가지고 있음
- indexPath.row == 2 -> label을 가지고 있음
- 등등등... UI가 다름
- 이때, Cell의 구분을 어떻게 하시는지...???
- 
- 여태까지 enum으로 cell을 구분하였음
- enum CellType {
- case image: return
- case title:
- case body:
- }
- 등.....
- 
- 
- 
- 
- 
- */

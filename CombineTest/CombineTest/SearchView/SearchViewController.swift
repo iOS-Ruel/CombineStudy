@@ -45,28 +45,14 @@ class SearchViewController: UIViewController {
         setupSearchController()
         
         viewModel.fetchBookList(searchText: "iOS")
-        
-//        viewModel.booksList
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] book in
-//                self?.searchTableView.reloadData()
-//            }
-//            .store(in: &cancellables)
-    
-        
+  
         viewModel.$bookList
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.searchTableView.reloadData()
             }
             .store(in: &cancellables)
-        
-//        viewModel.fetchBooks(searchText: "iOS") { [weak self] in
-//            DispatchQueue.main.async {
-//                self?.searchTableView.reloadData()
-//                
-//            }
-//        }
+
     }
     
     private func setupSearchController() {
@@ -86,12 +72,6 @@ class SearchViewController: UIViewController {
     
     @objc func refresh() {
         viewModel.fetchBookList(searchText: "iOS", isRefresh: true)
-//        viewModel.fetchBooks(searchText: "iOS", isRefresh: true) {
-//            DispatchQueue.main.async { [weak self] in
-//                self?.searchTableView.reloadData()
-//                self?.refreshControl.endRefreshing()
-//            }
-//        }
     }
     
 }
@@ -99,14 +79,12 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.books.count
         return viewModel.bookList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell",
                                                     for: indexPath) as? SearchTableViewCell {
-//            cell.bindCell(book: viewModel.books[indexPath.row])
             cell.bindCell(book: viewModel.bookList[indexPath.row])
             
             return cell
@@ -116,8 +94,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let viewModel = BookDetailViewModel(book: viewModel.books[indexPath.row])
         let viewModel = BookDetailViewModel(book: viewModel.bookList[indexPath.row])
         let vc = BookDetailViewController(viewModel: viewModel)
         
@@ -132,11 +108,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         if offsetY > contentHeight - height {
             let searchText = searchController.searchBar.text == "" ? "iOS" : searchController.searchBar.text
             viewModel.fetchBookList(searchText: searchText)
-//            viewModel.fetchBooks(searchText: searchText) { [weak self] in
-//                DispatchQueue.main.async {
-//                    self?.searchTableView.reloadData()
-//                }
-//            }
         }
     }
     
@@ -148,12 +119,6 @@ extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let text = searchController.searchBar.text ?? ""
         viewModel.fetchBookList(searchText: text == "" ? "iOS" : text.lowercased(), isRefresh: true)
-        
-//        viewModel.fetchBooks(searchText: text == "" ? "iOS" : text.lowercased(), isRefresh: true) { [weak self] in
-//            DispatchQueue.main.async {
-//                self?.searchTableView.reloadData()
-//            }
-//        }
     }
 }
 
