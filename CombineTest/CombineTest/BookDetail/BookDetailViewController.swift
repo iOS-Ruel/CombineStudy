@@ -7,20 +7,7 @@
 
 import UIKit
 import SnapKit
-/*
- authors
- contents
- datetime
- isbn
- price
- publisher
- sale_price
- status
- thumbnail
- title
- tarnslators
- url
- */
+import Combine
 
 class BookDetailViewController: UIViewController {
     private var scrollView: UIScrollView = {
@@ -89,7 +76,7 @@ class BookDetailViewController: UIViewController {
     }()
     
     var viewModel: BookDetailViewModel
-    
+    var cancelable = Set<AnyCancellable>()
     init(viewModel: BookDetailViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -106,8 +93,18 @@ class BookDetailViewController: UIViewController {
     }
     
     private func bindUI() {
+        print(viewModel.book)
+        self.viewModel.$bookImage
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                print("completion")
+            } receiveValue: { [weak self] image in
+                self?.bookImageView.image = image
+            }
+            .store(in: &cancelable)
+
         
-        self.bookImageView.image = viewModel.bookImage != nil ? viewModel.bookImage : nil
+//        self.bookImageView.image = viewModel.bookImage != nil ? viewModel.bookImage : nil
         self.bookTitleLabel.text = viewModel.book.title
         
         var authors: String = "저자: "
@@ -124,30 +121,43 @@ class BookDetailViewController: UIViewController {
         self.contentLabel.text = viewModel.book.contents
         self.publisherLabel.text = "출판사: \(viewModel.book.publisher)"
         
-        let attributedString = NSMutableAttributedString(string: "가격: \(viewModel.book.commaSalePrice) \(viewModel.book.commaPrice)")
+        if viewModel.book.sale_price == -1 {
+            let attributedString = NSMutableAttributedString(string: "가격: \(viewModel.book.commaPrice)")
 
-        // 가격에 취소선 추가 및 회색으로 변경
-        let priceRange = (attributedString.string as NSString).range(of: viewModel.book.commaPrice)
-        attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle,
-                                       value: NSNumber(value: NSUnderlineStyle.single.rawValue),
-                                       range: priceRange)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor,
-                                       value: UIColor.gray,
-                                       range: priceRange)
+            let salePriceRange = (attributedString.string as NSString).range(of: viewModel.book.commaPrice)
+            attributedString.addAttribute(NSAttributedString.Key.font,
+                                           value: UIFont.boldSystemFont(ofSize: 18),
+                                           range: salePriceRange)
 
-        // 판매 가격을 볼드체 및 18포인트로 변경
-        let salePriceRange = (attributedString.string as NSString).range(of: viewModel.book.commaSalePrice)
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                       value: UIFont.boldSystemFont(ofSize: 18),
-                                       range: salePriceRange)
-        // 가격을 12포인트로 변경
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                       value: UIFont.systemFont(ofSize: 12),
-                                       range: priceRange)
+            self.priceLabel.attributedText = attributedString
+        } else {
+            let attributedString = NSMutableAttributedString(string: "가격: \(viewModel.book.commaSalePrice) \(viewModel.book.commaPrice)")
+
+            // 가격에 취소선 추가 및 회색으로 변경
+            let priceRange = (attributedString.string as NSString).range(of: viewModel.book.commaPrice)
+            attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle,
+                                           value: NSNumber(value: NSUnderlineStyle.single.rawValue),
+                                           range: priceRange)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor,
+                                           value: UIColor.gray,
+                                           range: priceRange)
+
+            // 판매 가격을 볼드체 및 18포인트로 변경
+            let salePriceRange = (attributedString.string as NSString).range(of: viewModel.book.commaSalePrice)
+            attributedString.addAttribute(NSAttributedString.Key.font,
+                                           value: UIFont.boldSystemFont(ofSize: 18),
+                                           range: salePriceRange)
+            // 가격을 12포인트로 변경
+            attributedString.addAttribute(NSAttributedString.Key.font,
+                                           value: UIFont.systemFont(ofSize: 12),
+                                           range: priceRange)
 
 
 
-        self.priceLabel.attributedText = attributedString
+            self.priceLabel.attributedText = attributedString
+        }
+        
+      
     }
     
     private func setupUI() {
@@ -209,8 +219,6 @@ class BookDetailViewController: UIViewController {
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-16)
         }
-        
-        
     }
     
 }

@@ -69,7 +69,6 @@ class SearchViewController: UIViewController {
         }
     }
     
-    
     @objc func refresh() {
         viewModel.fetchBookList(searchText: "iOS", isRefresh: true)
     }
