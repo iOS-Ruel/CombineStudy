@@ -122,7 +122,8 @@ class SearchTableViewCell: UITableViewCell {
             
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async { [weak self] in
-                    self?.thumbnailIV.image = image
+                    guard let self else { return }
+                    self.thumbnailIV.image = image
                 }
             }
         }
