@@ -110,7 +110,7 @@ class BookDetailViewController: UIViewController {
     }
     
     private func bindUI() {
-        print(viewModel.book)
+        
         self.viewModel.$bookImage
             .receive(on: DispatchQueue.main)
             .sink { _ in

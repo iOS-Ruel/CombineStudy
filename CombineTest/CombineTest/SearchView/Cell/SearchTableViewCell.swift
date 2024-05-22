@@ -48,9 +48,18 @@ class SearchTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    private var noImageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No Image🥲"
+        label.font = .systemFont(ofSize: 12)
+        label.isHidden = true
+        label.textAlignment = .center
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print(#function)
+        thumbnailIV.image = nil
         setupUI()
     }
     
@@ -96,6 +105,11 @@ class SearchTableViewCell: UITableViewCell {
             $0.top.equalTo(publisherLabel.snp.bottom).offset(5)
             $0.bottom.equalTo(contentView.snp.bottom).inset(21)
         }
+        
+        self.thumbnailIV.addSubview(noImageLabel)
+        noImageLabel.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     
@@ -104,11 +118,14 @@ class SearchTableViewCell: UITableViewCell {
         authorLabel.text = book.authors.first
         publisherLabel.text = book.publisher
         dateLabel.text = book.dateString
+
         
         if let imageUrl = URL(string: book.thumbnail) {
             downloadImage(from: imageUrl)
+            self.noImageLabel.isHidden = true
         } else {
             self.thumbnailIV.image = nil
+            self.noImageLabel.isHidden = false
         }
     }
     

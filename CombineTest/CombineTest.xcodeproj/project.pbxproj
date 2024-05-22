@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4100F59B2BF10AEB007A47D2 /* BookDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100F59A2BF10AEB007A47D2 /* BookDetailService.swift */; };
+		41998EB32BFD88F900DF3043 /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41998EB22BFD88F900DF3043 /* API_KEY.swift */; };
 		41A332DF2BEE80B7007B6FF2 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A332DE2BEE80B7007B6FF2 /* BookDetailViewController.swift */; };
 		41A332E12BEE80C0007B6FF2 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A332E02BEE80C0007B6FF2 /* BookDetailViewModel.swift */; };
 		41E1DD262BE8F05000E51D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD252BE8F05000E51D54 /* AppDelegate.swift */; };
@@ -19,9 +20,7 @@
 		41E1DD3F2BE9033D00E51D54 /* BookDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD3E2BE9033D00E51D54 /* BookDocument.swift */; };
 		41E1DD412BE906FB00E51D54 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD402BE906FB00E51D54 /* SearchService.swift */; };
 		41E1DD432BE90A9200E51D54 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD422BE90A9200E51D54 /* SearchViewModel.swift */; };
-		41E1DD462BE90AC900E51D54 /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD452BE90AC900E51D54 /* API_KEY.swift */; };
 		41E1DD492BE90D1500E51D54 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41E1DD482BE90D1500E51D54 /* SnapKit */; };
-		41E1DD4B2BE90D1500E51D54 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41E1DD4A2BE90D1500E51D54 /* SnapKit-Dynamic */; };
 		41E1DD4F2BE90D6D00E51D54 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD4E2BE90D6D00E51D54 /* SearchViewController.swift */; };
 		41E1DD512BE9112800E51D54 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E1DD502BE9112800E51D54 /* SearchTableViewCell.swift */; };
 		41F348A32BEBBEAF0070A8ED /* Extension_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F348A22BEBBEAF0070A8ED /* Extension_String.swift */; };
@@ -30,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		4100F59A2BF10AEB007A47D2 /* BookDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailService.swift; sourceTree = "<group>"; };
+		41998EB22BFD88F900DF3043 /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
 		41A332DE2BEE80B7007B6FF2 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		41A332E02BEE80C0007B6FF2 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		41E1DD222BE8F05000E51D54 /* CombineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +42,6 @@
 		41E1DD3E2BE9033D00E51D54 /* BookDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDocument.swift; sourceTree = "<group>"; };
 		41E1DD402BE906FB00E51D54 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		41E1DD422BE90A9200E51D54 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		41E1DD452BE90AC900E51D54 /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
 		41E1DD4E2BE90D6D00E51D54 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		41E1DD502BE9112800E51D54 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		41F348A22BEBBEAF0070A8ED /* Extension_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_String.swift; sourceTree = "<group>"; };
@@ -56,7 +55,6 @@
 			files = (
 				41E1DD3B2BE8F2CB00E51D54 /* KakaoSDK in Frameworks */,
 				41E1DD492BE90D1500E51D54 /* SnapKit in Frameworks */,
-				41E1DD4B2BE90D1500E51D54 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +74,7 @@
 		41E1DD192BE8F05000E51D54 = {
 			isa = PBXGroup;
 			children = (
-				41E1DD452BE90AC900E51D54 /* API_KEY.swift */,
+				41998EB22BFD88F900DF3043 /* API_KEY.swift */,
 				41E1DD242BE8F05000E51D54 /* CombineTest */,
 				41E1DD232BE8F05000E51D54 /* Products */,
 			);
@@ -162,7 +160,6 @@
 			packageProductDependencies = (
 				41E1DD3A2BE8F2CB00E51D54 /* KakaoSDK */,
 				41E1DD482BE90D1500E51D54 /* SnapKit */,
-				41E1DD4A2BE90D1500E51D54 /* SnapKit-Dynamic */,
 			);
 			productName = CombineTest;
 			productReference = 41E1DD222BE8F05000E51D54 /* CombineTest.app */;
@@ -222,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41998EB32BFD88F900DF3043 /* API_KEY.swift in Sources */,
 				41E1DD512BE9112800E51D54 /* SearchTableViewCell.swift in Sources */,
 				41E1DD3D2BE8F44E00E51D54 /* Book.swift in Sources */,
 				41A332DF2BEE80B7007B6FF2 /* BookDetailViewController.swift in Sources */,
@@ -229,7 +227,6 @@
 				41F348A32BEBBEAF0070A8ED /* Extension_String.swift in Sources */,
 				41E1DD432BE90A9200E51D54 /* SearchViewModel.swift in Sources */,
 				41F348A52BEBBEC10070A8ED /* Extension_Date.swift in Sources */,
-				41E1DD462BE90AC900E51D54 /* API_KEY.swift in Sources */,
 				41E1DD4F2BE90D6D00E51D54 /* SearchViewController.swift in Sources */,
 				4100F59B2BF10AEB007A47D2 /* BookDetailService.swift in Sources */,
 				41E1DD262BE8F05000E51D54 /* AppDelegate.swift in Sources */,
@@ -478,11 +475,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 41E1DD472BE90D1500E51D54 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		41E1DD4A2BE90D1500E51D54 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 41E1DD472BE90D1500E51D54 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
