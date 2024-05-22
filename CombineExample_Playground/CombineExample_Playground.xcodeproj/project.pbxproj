@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		410A1D662BFE3E030052673C /* Combine_Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		410A1D672BFE3EAB0052673C /* Combine_Notification.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Notification.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		410A1D5F2BFE3D970052673C = {
+			isa = PBXGroup;
+			children = (
+				410A1D672BFE3EAB0052673C /* Combine_Notification.playground */,
+				410A1D662BFE3E030052673C /* Combine_Playground.playground */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		410A1D602BFE3D970052673C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = 410A1D632BFE3D970052673C /* Build configuration list for PBXProject "CombineExample_Playground" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 410A1D5F2BFE3D970052673C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		410A1D642BFE3D970052673C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		410A1D652BFE3D970052673C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		410A1D632BFE3D970052673C /* Build configuration list for PBXProject "CombineExample_Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410A1D642BFE3D970052673C /* Debug */,
+				410A1D652BFE3D970052673C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 410A1D602BFE3D970052673C /* Project object */;
+}
