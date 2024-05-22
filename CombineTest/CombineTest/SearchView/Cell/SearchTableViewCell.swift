@@ -44,7 +44,9 @@ class SearchTableViewCell: UITableViewCell {
     private lazy var thumbnailIV: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = nil
+        imageView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
+        imageView.layer.cornerRadius = 5
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -59,6 +61,7 @@ class SearchTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         thumbnailIV.image = nil
         setupUI()
     }

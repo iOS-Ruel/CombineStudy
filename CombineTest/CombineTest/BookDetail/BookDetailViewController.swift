@@ -116,12 +116,11 @@ class BookDetailViewController: UIViewController {
             .sink { _ in
                 print("completion")
             } receiveValue: { [weak self] image in
-                self?.bookImageView.image = image
+                self?.bookImageView.image = image != nil ? image : nil
             }
             .store(in: &cancelable)
         
         
-        //        self.bookImageView.image = viewModel.bookImage != nil ? viewModel.bookImage : nil
         self.bookTitleLabel.text = viewModel.book.title
         
         var authors: String = "저자: "
