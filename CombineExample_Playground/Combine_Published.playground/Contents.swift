@@ -36,8 +36,8 @@ class AgreementFormVC: UIViewController {
  
  */
 
-let viewController = AgreementFormVC()
-PlaygroundPage.current.liveView = viewController
+//let viewController = AgreementFormVC()
+//PlaygroundPage.current.liveView = viewController
 
 //PlaygroundPage.current.needsIndefiniteExecution = true
 //출처: https://greatgift.tistory.com/entry/Playground-에서-View-Controller-사용하기 [greatgift:티스토리]
