@@ -1,0 +1,172 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		410A1DAE2BFEF8F10052673C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 410A1D932BFEF8F00052673C;
+			remoteInfo = Combine_Cancellable;
+		};
+		41B6657F2BFEFB480037AC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41B665632BFEFB470037AC4F;
+			remoteInfo = Combine_Multiple_Subscriptions;
+		};
+		41B665A82BFF099E0037AC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41B6658C2BFF099D0037AC4F;
+			remoteInfo = Combine_JustPublihser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		410A1D662BFE3E030052673C /* Combine_Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		410A1D672BFE3EAB0052673C /* Combine_Notification.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Notification.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		410A1D882BFEDA6C0052673C /* Combine_Timer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Timer.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		410A1D892BFEE1110052673C /* Combine_Published.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Published.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Cancellable.xcodeproj; path = Combine_Cancellable/Combine_Cancellable.xcodeproj; sourceTree = "<group>"; };
+		41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Multiple_Subscriptions.xcodeproj; path = Combine_Multiple_Subscriptions/Combine_Multiple_Subscriptions.xcodeproj; sourceTree = "<group>"; };
+		41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_JustPublihser.xcodeproj; path = Combine_JustPublihser/Combine_JustPublihser.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		410A1D5F2BFE3D970052673C = {
+			isa = PBXGroup;
+			children = (
+				41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */,
+				41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */,
+				410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */,
+				410A1D892BFEE1110052673C /* Combine_Published.playground */,
+				410A1D882BFEDA6C0052673C /* Combine_Timer.playground */,
+				410A1D672BFE3EAB0052673C /* Combine_Notification.playground */,
+				410A1D662BFE3E030052673C /* Combine_Playground.playground */,
+			);
+			sourceTree = "<group>";
+		};
+		410A1DAB2BFEF8F10052673C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				410A1DAF2BFEF8F10052673C /* Combine_Cancellable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41B6657B2BFEFB470037AC4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41B665802BFEFB480037AC4F /* Combine_Multiple_Subscriptions.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41B665A42BFF099E0037AC4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41B665A92BFF099E0037AC4F /* Combine_JustPublihser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		410A1D602BFE3D970052673C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = 410A1D632BFE3D970052673C /* Build configuration list for PBXProject "CombineExample_Playground" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 410A1D5F2BFE3D970052673C;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 410A1DAB2BFEF8F10052673C /* Products */;
+					ProjectRef = 410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */;
+				},
+				{
+					ProductGroup = 41B665A42BFF099E0037AC4F /* Products */;
+					ProjectRef = 41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */;
+				},
+				{
+					ProductGroup = 41B6657B2BFEFB470037AC4F /* Products */;
+					ProjectRef = 41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		410A1DAF2BFEF8F10052673C /* Combine_Cancellable.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Combine_Cancellable.app;
+			remoteRef = 410A1DAE2BFEF8F10052673C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B665802BFEFB480037AC4F /* Combine_Multiple_Subscriptions.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Combine_Multiple_Subscriptions.app;
+			remoteRef = 41B6657F2BFEFB480037AC4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B665A92BFF099E0037AC4F /* Combine_JustPublihser.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Combine_JustPublihser.app;
+			remoteRef = 41B665A82BFF099E0037AC4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin XCBuildConfiguration section */
+		410A1D642BFE3D970052673C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		410A1D652BFE3D970052673C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		410A1D632BFE3D970052673C /* Build configuration list for PBXProject "CombineExample_Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410A1D642BFE3D970052673C /* Debug */,
+				410A1D652BFE3D970052673C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 410A1D602BFE3D970052673C /* Project object */;
+}
