@@ -21,6 +21,13 @@
 			remoteGlobalIDString = 41B665632BFEFB470037AC4F;
 			remoteInfo = Combine_Multiple_Subscriptions;
 		};
+		41B665A82BFF099E0037AC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41B6658C2BFF099D0037AC4F;
+			remoteInfo = Combine_JustPublihser;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +37,14 @@
 		410A1D892BFEE1110052673C /* Combine_Published.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Published.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Cancellable.xcodeproj; path = Combine_Cancellable/Combine_Cancellable.xcodeproj; sourceTree = "<group>"; };
 		41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Multiple_Subscriptions.xcodeproj; path = Combine_Multiple_Subscriptions/Combine_Multiple_Subscriptions.xcodeproj; sourceTree = "<group>"; };
+		41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_JustPublihser.xcodeproj; path = Combine_JustPublihser/Combine_JustPublihser.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		410A1D5F2BFE3D970052673C = {
 			isa = PBXGroup;
 			children = (
+				41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */,
 				41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */,
 				410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */,
 				410A1D892BFEE1110052673C /* Combine_Published.playground */,
@@ -57,6 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				41B665802BFEFB480037AC4F /* Combine_Multiple_Subscriptions.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41B665A42BFF099E0037AC4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41B665A92BFF099E0037AC4F /* Combine_JustPublihser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +103,10 @@
 					ProjectRef = 410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */;
 				},
 				{
+					ProductGroup = 41B665A42BFF099E0037AC4F /* Products */;
+					ProjectRef = 41B665A32BFF099E0037AC4F /* Combine_JustPublihser.xcodeproj */;
+				},
+				{
 					ProductGroup = 41B6657B2BFEFB470037AC4F /* Products */;
 					ProjectRef = 41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */;
 				},
@@ -109,6 +130,13 @@
 			fileType = wrapper.application;
 			path = Combine_Multiple_Subscriptions.app;
 			remoteRef = 41B6657F2BFEFB480037AC4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B665A92BFF099E0037AC4F /* Combine_JustPublihser.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Combine_JustPublihser.app;
+			remoteRef = 41B665A82BFF099E0037AC4F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
