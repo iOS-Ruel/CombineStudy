@@ -14,6 +14,13 @@
 			remoteGlobalIDString = 410A1D932BFEF8F00052673C;
 			remoteInfo = Combine_Cancellable;
 		};
+		41B6657F2BFEFB480037AC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41B665632BFEFB470037AC4F;
+			remoteInfo = Combine_Multiple_Subscriptions;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +29,14 @@
 		410A1D882BFEDA6C0052673C /* Combine_Timer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Timer.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		410A1D892BFEE1110052673C /* Combine_Published.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combine_Published.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Cancellable.xcodeproj; path = Combine_Cancellable/Combine_Cancellable.xcodeproj; sourceTree = "<group>"; };
+		41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Combine_Multiple_Subscriptions.xcodeproj; path = Combine_Multiple_Subscriptions/Combine_Multiple_Subscriptions.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		410A1D5F2BFE3D970052673C = {
 			isa = PBXGroup;
 			children = (
+				41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */,
 				410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */,
 				410A1D892BFEE1110052673C /* Combine_Published.playground */,
 				410A1D882BFEDA6C0052673C /* Combine_Timer.playground */,
@@ -40,6 +49,14 @@
 			isa = PBXGroup;
 			children = (
 				410A1DAF2BFEF8F10052673C /* Combine_Cancellable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41B6657B2BFEFB470037AC4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41B665802BFEFB480037AC4F /* Combine_Multiple_Subscriptions.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +85,10 @@
 					ProductGroup = 410A1DAB2BFEF8F10052673C /* Products */;
 					ProjectRef = 410A1DAA2BFEF8F10052673C /* Combine_Cancellable.xcodeproj */;
 				},
+				{
+					ProductGroup = 41B6657B2BFEFB470037AC4F /* Products */;
+					ProjectRef = 41B6657A2BFEFB470037AC4F /* Combine_Multiple_Subscriptions.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -81,6 +102,13 @@
 			fileType = wrapper.application;
 			path = Combine_Cancellable.app;
 			remoteRef = 410A1DAE2BFEF8F10052673C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41B665802BFEFB480037AC4F /* Combine_Multiple_Subscriptions.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Combine_Multiple_Subscriptions.app;
+			remoteRef = 41B6657F2BFEFB480037AC4F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
