@@ -11,7 +11,7 @@ Combine Playground - Combine 학습을 위한 놀이터~
 ### 구독이 완료되지 않을 수 있을까?
 
   - 구독이 완료되어야 하지만 항상 그런것은 아님. Notification를 보면 알 수 있음  
-  ```
+  ```swift
   extension Notification.Name {
     static let newEvent = Notification.Name("new_event")
   }
