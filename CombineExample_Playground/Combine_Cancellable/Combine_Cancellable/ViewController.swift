@@ -29,6 +29,8 @@ class ViewController: UIViewController {
 }
 
 /*
+ Combine의 메모리 관리
+ 
  Subscribers는 값을 수신하고 처리하려 할 때 subscription을 유지할 수 있음.
  subscription은 더 이상 필요하지 않으면 해제해야함
  
