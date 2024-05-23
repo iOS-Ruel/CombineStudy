@@ -10,10 +10,6 @@ struct Event {
     let scheduledOn: Date
 }
 
-
-
-
-
 let eventPublisher = NotificationCenter
     .Publisher(center: .default, name: .newEvent, object: nil)
     .map { notification -> String? in
