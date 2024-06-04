@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4100F59B2BF10AEB007A47D2 /* BookDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100F59A2BF10AEB007A47D2 /* BookDetailService.swift */; };
+		417192C72C0C4207001AE169 /* Extension_URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417192C62C0C4207001AE169 /* Extension_URLComponents.swift */; };
 		41998EB32BFD88F900DF3043 /* API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41998EB22BFD88F900DF3043 /* API_KEY.swift */; };
 		41A332DF2BEE80B7007B6FF2 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A332DE2BEE80B7007B6FF2 /* BookDetailViewController.swift */; };
 		41A332E12BEE80C0007B6FF2 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A332E02BEE80C0007B6FF2 /* BookDetailViewModel.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		4100F59A2BF10AEB007A47D2 /* BookDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailService.swift; sourceTree = "<group>"; };
+		417192C62C0C4207001AE169 /* Extension_URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_URLComponents.swift; sourceTree = "<group>"; };
 		41998EB22BFD88F900DF3043 /* API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEY.swift; sourceTree = "<group>"; };
 		41A332DE2BEE80B7007B6FF2 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		41A332E02BEE80C0007B6FF2 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				41E1DD2E2BE8F05100E51D54 /* Assets.xcassets */,
 				41E1DD302BE8F05100E51D54 /* LaunchScreen.storyboard */,
 				41E1DD332BE8F05100E51D54 /* Info.plist */,
+				417192C62C0C4207001AE169 /* Extension_URLComponents.swift */,
 			);
 			path = CombineTest;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41998EB32BFD88F900DF3043 /* API_KEY.swift in Sources */,
+				417192C72C0C4207001AE169 /* Extension_URLComponents.swift in Sources */,
 				41E1DD512BE9112800E51D54 /* SearchTableViewCell.swift in Sources */,
 				41E1DD3D2BE8F44E00E51D54 /* Book.swift in Sources */,
 				41A332DF2BEE80B7007B6FF2 /* BookDetailViewController.swift in Sources */,
